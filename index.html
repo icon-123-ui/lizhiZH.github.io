@@ -1,6 +1,17 @@
 <html>
   <head> 
     <title>欢迎访问</title>
+    <script type="text/javascript">
+     var userAgent =navigator.userAgent.toLowerCase();// 获取用户浏览器内核以字符串形式返回
+     //调用match() 方法
+     var userAndroid=userAgent.match("/android/i")=="android";//判断是否为安卓浏览器，是 返回 true
+     var userIphone=userAgent.match("/ipone/i")=="ipone";// 判断是否为苹果浏览器
+     if(userAndroid||userIphone){
+         alert("您当前为移动端访问");
+     }
+     else {
+        alert("你当前为电脑端访问");
+     }
    <meta charset="utf-8">
      <style type="text/css">
      .style{
