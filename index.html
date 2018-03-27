@@ -4,6 +4,7 @@
     <script type="text/javascript">
      var userAgent =navigator.userAgent.toLowerCase();// 获取用户浏览器内核以字符串形式返回
      //调用match() 方法
+      alert(userAgent);
      var userAndroid=userAgent.match("/android/i")=="android";//判断是否为安卓浏览器，是 返回 true
      var userIphone=userAgent.match("/ipone/i")=="ipone";// 判断是否为苹果浏览器
      if(userAndroid||userIphone){
