@@ -1,6 +1,7 @@
 <html>
   <head> 
     <title>欢迎访问</title>
+      <meta charset="utf-8">
     <script type="text/javascript">
      var userAgent =navigator.userAgent.toLowerCase();// 获取用户浏览器内核以字符串形式返回
       alert(userAgent);
@@ -14,8 +15,17 @@
      else {
         alert("你当前为PC端访问");
      }
+      
+      function showtime(){
+        	 var d =new Date();
+           var d1 =d.toLocaleTimeString();
+           var span_obj=document.getElementById('span_id');
+           span_obj.innerHTML='系统当前时间为：'+d1;	
+      	}
+        function start(){
+	          setInterval("showtime()",1000);
+	      	}
       </script>
-   <meta charset="utf-8">
      <style type="text/css">
      .style{
        color:red;
@@ -37,7 +47,7 @@
        }
      </style>
   </head>
-  <body bgcolor="#35,50,69">
+  <body bgcolor="#35,50,69" onLoad="start()">
 
  <div class="style"><center>立志装潢 -----用心为你服务</center></div>
  <center><div class="style1">立志装潢主营室内装潢，公司位于安徽六安。立志装潢本着“客户第一，诚信至上”的原则，<br>与多家企业建立了长期的合作关系。热诚欢迎各界朋友前来参观、考察、洽谈业务。</div></center>
@@ -46,6 +56,6 @@
     
     <center><h2> TEL:18555879110 （微信同号）
       <br><a href="tencent://message/?uin=861234883&Menu=yes& Service=300&sigT=42a1e5347953b64c5ff3980f8a6e644d4b31456cb0b6ac6b27663a3c4dd0f4aa14a543b1716f9d45">PC端联系</a> ----<a href="mqqwpa://im/chat?chat_type=wpa&uin=861234883&version=1&src_type=web&web_src=oicqzone.com">移动端联系</a> </h2></center>
-    <center><h3>the copyright belong to lizhi All Right Reserved 2018 </h3></center>
+    <center><h3>the copyright belong to lizhi All Right Reserved 2018 <span id="span_id"></span></h3></center>
     <body>
 </html>
